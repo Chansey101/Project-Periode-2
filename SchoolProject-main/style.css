@@ -12,13 +12,13 @@ body, html {
 
   h2 {
     color: black;
-    font-family: 'Noto Serif', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
 }
 
   h3 {
     color: #1daeec;
-    font-family: 'Noto Serif', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
   }
   
@@ -30,19 +30,19 @@ body, html {
 
 p {
     color: black;
-    font-family: 'Noto Serif', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
   .topnav {
-    background-color: #f1452e;
+    background-color: #5d83ff;
     overflow: hidden;
   }
   
   .topnav a {
     float: left;
     color: #000000;
-    font-family: 'Noto Serif', serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -80,7 +80,7 @@ p {
 
 .card {
     color: var(--clr-neutral-100);
-    background-image: url(https://i.imgur.com/rocwGZI.png);
+    background-image: url(img/REM.png);
     background-size: cover;
     padding: 10rem 0 0;
     max-width: 35ch;
@@ -95,6 +95,25 @@ p {
     margin-top: 15%;
     float:left;
     text-align: center;
+}
+
+.card2 {
+  color: var(--clr-neutral-100);
+  background-image: url(img/RAM.png);
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 11%;
+  margin-top: 15%;
+  float:left;
+  text-align: center;
 }
 
 .card:hover,
