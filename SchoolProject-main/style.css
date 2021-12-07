@@ -23,7 +23,7 @@ body, html {
   }
   
   h4 {
-    color: #1daeec;
+    color: #fa8bb9;
     font-family: Fira Sans,sans-serif;
     font-size: 25px;
 }
@@ -35,7 +35,7 @@ p {
 }
 
   .topnav {
-    background-color: #5d83ff;
+    background-color: #fa8bb9;
     overflow: hidden;
   }
   
@@ -91,9 +91,8 @@ p {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-left: 11%;
+    margin-left: 0%;
     margin-top: 15%;
-    float:left;
     text-align: center;
 }
 
@@ -110,15 +109,58 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-left: 11%;
+  margin-right: 0%;
   margin-top: 15%;
-  float:left;
   text-align: center;
+}
+
+
+.card2:hover,
+.card2:focus-within {
+
+  transform: rotateY(180deg);
+
+}
+
+.card2-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(hsl(0 0% 0% / 0),
+          hsl(0 0% 0% /0.3) 10%,
+          hsl(0 0% 0% / 1));
+  
+}
+
+.card2-title {
+  position: relative;
+  width: max-content;
+
+}
+
+.card2-title::after {
+  content: "";
+  left: calc(var(--padding)* -1);
+  position: absolute;
+  height: 4px;
+ 
+  bottom: -2px;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  transition: transform 500ms ease;
+  transform-origin:left;
+
+}
+.card2:hover .card-title::after,.card:focus-within .card-title::after{
+  transform:scaleX(1);
+}
+
+.card2-body {
+  color: rgb(255 255 255 / 0.8);
 }
 
 .card:hover,
 .card:focus-within {
-        
+      
     transform: rotateY(180deg);
 }
 
@@ -274,4 +316,18 @@ p {
 }
 
 
+.card3 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
