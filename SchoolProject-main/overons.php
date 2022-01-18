@@ -1,3 +1,37 @@
+<?php
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $databasename = "oof";
+
+
+
+ //verbinding met de server
+ $conn = mysqli_connect($servername,$username, $password, $databasename);
+
+ $sql = "SELECT * FROM `users`";
+
+ //mysql queary suurt de query naar de database en voert deze uit
+ $result = mysqli_query($conn, $sql);
+
+ 
+ $row = "";
+ while ( $record = mysqli_fetch_assoc($result)){
+
+ $row .= "<tr>
+        <td> {$record["ID"]} </td>
+        <td> {$record["firstname"]} </td>
+        <td> {$record["infix"]} </td>
+        <td> {$record["lastname"]} </td>
+          </tr>";
+
+ }
+
+ 
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head> 
@@ -51,9 +85,31 @@
 <img src="https://c.tenor.com/SD-5sdtUX8QAAAAM/simpsons-homer.gif" alt="About us"  width="250" />    
 
 
+<h4>Maak een Account!</h4>
+
+<div class="container">
+    <div class="col-6">
+
+    <form action="./overons.php" method="post">
+        <label for ="inputFirstname" class="form-label">Voornaam:</label>
+        <input placeholder= "Verplicht"input type="text" name="firstname" id="inputFirstname"class="form-control"> 
+
+        <label for ="inputFixname" class="form-label">Tussenvoegsel:</label>
+        <input placeholder= "Verplicht" type="text" name="infix" id="inputFixname"class="form-control"> 
 
 
+        <label for ="inputLastname" class="form-label">Achternaam:</label>
+        <input     placeholder= "Verplicht"type="text" name="lastname" id="inputLastname"class="form-control"> 
 
+        <label for ="password" class="form-label">wachtwoord:</label>
+        <input placeholder= "Verplicht" type="text" name="password" id="password"class="form-control"> 
+
+
+        <input type="submit" value="Verstuur" class="form-control mt-3 btn btn-outline-succes">
+     
+        </div>
+    
+      </form>
 </body>
  </section>
 </html>
