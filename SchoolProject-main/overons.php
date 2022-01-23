@@ -58,7 +58,7 @@
 <div class="container">
     <div class="col-6">
 
-    <form action="./overons.php" method="post">
+    <form action="./create.php" method="post">
         <label for ="inputFirstname" class="form-label">Voornaam:</label>
         <input placeholder= "Verplicht"input type="text" name="firstname" id="inputFirstname"class="form-control"> 
 

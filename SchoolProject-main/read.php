@@ -26,3 +26,27 @@
  
 
 ?>
+
+  
+<div class="container">
+    <div class="row">
+    <div class="col-12">
+
+    <table class="table-striped table -hover">
+</table>
+ <thead>
+        <tr>
+            <th scope="col">id </th>
+            <th scope="col">Voornaam</th>
+            <th scope="col">Tussenvoegsel</th>
+            <th scope="col">Achternaam</th>
+            <th scope="col">wachtwoord</th>
+        </tr>
+        </thead>
+        <tbody>
+           <?php echo $row; ?>
+        </tbody>
+       </table>        
+     </div> 
+   </div>
+</div>
